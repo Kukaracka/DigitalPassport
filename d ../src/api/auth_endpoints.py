@@ -14,9 +14,6 @@ from services.auth_service import AuthService
 
 auth_router = APIRouter(prefix="", tags=["Auth"])
 
-
-
-
 @auth_router.post("/login", response_model=TokenResponseSchema)
 async def login(credentials: UserLoginSchema, responce: Response):
     auth_service = AuthService(UserRepository)

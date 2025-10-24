@@ -1,6 +1,5 @@
-from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker
+from sqlalchemy.ext.asyncio import async_sessionmaker, create_async_engine
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
-
 
 DATABASE_USL = (
     "postgresql+asyncpg://digitalpassport:digitalpassportpass@db:5432/digitalpassportdb"
