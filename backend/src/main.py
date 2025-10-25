@@ -4,9 +4,11 @@ import uvicorn
 
 from database.models import Base, engine
 
+
 async def create_tables():
     async with engine.begin() as conn:
         await conn.run_sync(Base.metadata.create_all)
+
 
 app = FastAPI()
 app.add_event_handler("startup", create_tables)

@@ -13,6 +13,6 @@ class UserService:
         return user_id
 
     async def read_all_users(self) -> list[UserReadSchema]:
-        users_data: list[UserModel] = await self.users_repo.read_all()
-        users_schema = [UserReadSchema.from_orm(user) for user in users_data]
+        user_data: list[UserModel] = await self.users_repo.read_all()
+        users_schema = [UserReadSchema.from_orm(user) for user in user_data]
         return users_schema

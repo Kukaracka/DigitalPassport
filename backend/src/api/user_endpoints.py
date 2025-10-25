@@ -20,7 +20,7 @@ async def create_user(
 ):
     user_id = UserService(UserRepository).add_user(user)
     return {"created": True, "user_id": user_id}
-            
+
 
 @user_router.get(
     "/",
