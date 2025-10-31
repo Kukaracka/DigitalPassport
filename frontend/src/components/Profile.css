@@ -1,0 +1,213 @@
+.profile {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.profile-header {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 15px 20px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.back-button {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.profile-header h1 {
+  color: #2d3748;
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.profile-content {
+  padding: 30px 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.profile-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(15px);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.profile-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 auto 20px;
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+.profile-info h2 {
+  color: #2d3748;
+  margin: 0 0 5px 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.profile-username {
+  color: #718096;
+  margin: 0 0 25px 0;
+  font-size: 16px;
+}
+
+.profile-details {
+  text-align: left;
+  background: rgba(248, 250, 252, 0.8);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(226, 232, 240, 0.6);
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.5);
+}
+
+.detail-item:last-child {
+  border-bottom: none;
+}
+
+.detail-label {
+  color: #4a5568;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.detail-value {
+  color: #2d3748;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.profile-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.action-button {
+  padding: 12px 20px;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  background: white;
+  color: #4a5568;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.action-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  border-color: #667eea;
+  color: #667eea;
+}
+
+.edit-button:hover {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border-color: transparent;
+}
+
+.security-button:hover {
+  background: linear-gradient(135deg, #48bb78, #38a169);
+  color: white;
+  border-color: transparent;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .profile-content {
+    padding: 20px 15px;
+  }
+  
+  .profile-card {
+    padding: 25px 20px;
+  }
+  
+  .profile-actions {
+    flex-direction: column;
+  }
+  
+  .action-button {
+    width: 100%;
+  }
+  
+  .detail-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  
+  .detail-value {
+    word-break: break-all;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-header {
+    padding: 12px 15px;
+  }
+  
+  .profile-header h1 {
+    font-size: 18px;
+  }
+  
+  .back-button {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+  
+  .profile-avatar {
+    width: 70px;
+    height: 70px;
+    font-size: 20px;
+  }
+  
+  .profile-info h2 {
+    font-size: 20px;
+  }
+}
